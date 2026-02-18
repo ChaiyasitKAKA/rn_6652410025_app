@@ -27,7 +27,7 @@ export default function Taxical() {
     const time = parseFloat(timetraffic);
 
     if (isNaN(dist) || isNaN(time)) {
-      return; // ถ้าไม่ได้กรอกตัวเลข ไม่ต้องคำนวณ
+      return;
     }
 
     let t_cost = time * 3.0;
@@ -64,7 +64,7 @@ export default function Taxical() {
     // รวมค่าโดยสารทั้งหมด (35 บาทเริ่มต้น + ค่าระยะทางส่วนเกิน + ค่ารถติด)
     let total = 35 + d_cost + t_cost;
 
-    // ปัดเศษให้เป็นจำนวนเต็ม (แท็กซี่จริงจะปัดเป็นเลขคี่ แต่ในแอปปัดเต็มธรรมดาก็พอครับ)
+    // ปัดเศษให้เป็นจำนวนเต็ม
     const final = Math.ceil(total);
 
     setTotalPrice(final);
